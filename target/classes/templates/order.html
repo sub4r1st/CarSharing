@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content>
+    <meta name="author" content>
+    <title>Orders</title>
+</head>
+<body>
+<!--Таблица заказов-->
+    <table border="1">
+        <tr>
+            <th>Id</th><!--ID заказа-->
+            <th>ID пользователя</th>
+            <th>Автомобиль</th>
+            <th>Клиент</th>
+            <th>Дата</th>
+            <th>Количество дней</th>
+        </tr>
+        <tr th:each="order : ${orders}">
+            <td th:text="${order.id}"></td>
+            <td th:text="${order.userId}"></td>
+            <td th:text="${order.auto}"></td>
+            <td th:text="${order.owner}"></td>
+            <td th:text="${order.date}" width="80px"></td>
+            <td th:text="${order.days}"></td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <a href="/user">Назад на главную страницу</a>
+</body>
+</html>

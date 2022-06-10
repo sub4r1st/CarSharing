@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content>
+  <meta name="author" content>
+  <title>Add new auto</title>
+</head>
+<body>
+
+<form name="Клиент" role="form" th:action="@{/admin/createauto}" th:method="post" th:object="${auto}">
+  <input type="text" name="brand" th:field="*{brand}" class="form-control" placeholder="Бренд" required><br>
+  <input type="text" name="model" th:field="*{model}" class="form-control" placeholder="Модель" required><br>
+  <input type="text" name="technicalPassport" th:field="*{technicalPassport}" class="form-control" placeholder="Тех. Паспорт" required><br>
+  <input type="text" name="stateNumber" th:field="*{stateNumber}" class="form-control" placeholder="Номер автомобиля" required><br>
+  <input type="text" name="year" th:field="*{year}" class="form-control" placeholder="Год выпуска" required><br>
+  <input type="text" name="info" th:field="*{info}" class="form-control" placeholder="Информация" required><br>
+  <input type="text" name="price" th:field="*{price}" class="form-control" placeholder="Cтоимость" required><br>
+
+  <input type="submit" value="Отправить">
+
+</form>
+<br>
+<br>
+<a href="/admin">Назад на главную страницу</a>
+</body>
+</html>

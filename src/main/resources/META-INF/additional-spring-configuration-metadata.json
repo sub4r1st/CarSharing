@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "spring.db.driver",
+      "type": "java.lang.String",
+      "description": "Description for spring.db.driver."
+  }
+] }

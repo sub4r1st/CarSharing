@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content>
+  <meta name="author" content>
+  <title>Used autos</title>
+</head>
+<body>
+<!--Таблица эксплуатируемых автомобилей-->
+<table border="1">
+  <tr>
+    <th>ID</th>
+    <th>Марка</th>
+    <th>Модел</th>
+    <th>Тех. паспорт</th>
+    <th>Номер автомобилят</th>
+    <th>Год выпуска</th>
+    <th>Информация</th>
+    <th>Cтоимость</th>
+  </tr>
+  <tr th:each="auto : ${autos}">
+    <td th:text="${auto.id}"></td>
+    <td th:text="${auto.brand}"></td>
+    <td th:text="${auto.model}"></td>
+    <td th:text="${auto.technicalPassport}"></td>
+    <td th:text="${auto.stateNumber}"></td>
+    <td th:text="${auto.year}"></td>
+    <td th:text="${auto.info}"></td>
+    <td th:text="${auto.price}"></td>
+  </tr>
+</table>
+<br>
+<a href="/admin">Назад на главную страницу</a>
+</body>
+</html>>
